@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
-project(HelloCpp C)
+project(HelloCpp CXX)
 
-set(CMAKE_C_STANDARD 23)
+set(CMAKE_CXX_STANDARD 23)
 
 # Boolean OFF is the default value.
 option(HELLO_KITTY "HELLO_KITTY")

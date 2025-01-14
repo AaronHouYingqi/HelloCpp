@@ -4,7 +4,7 @@
 
 #include "solution.h"
 
-int foo(void)
+int foo()
 {
     return 0;
 }

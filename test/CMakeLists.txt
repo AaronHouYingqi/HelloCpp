@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 if (${LEETCODE})
     add_executable(
         test
-        leetcode_ut.cc
+        leetcode_ut.cpp
     )
     target_include_directories(
         test

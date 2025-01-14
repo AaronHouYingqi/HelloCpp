@@ -1,5 +1,5 @@
 if (${HELLO_KITTY})
-    add_executable(main main.c)
+    add_executable(main main.cpp)
 endif()
 
 if (${LEETCODE})
