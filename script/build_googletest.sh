@@ -3,8 +3,8 @@
 ROOT_PATH=$(cd "$(dirname "$0")/.." || exit; pwd)
 cd "${ROOT_PATH}" || exit
 
-SOURCE_PATH="./external/GoogleTest"
-git submodule update --init --recursive "${SOURCE_PATH}"
+SOURCE_PATH="./open-source/GoogleTest"
+git submodule update --init --remote --recursive
 
 BINARY_PATH="./.GoogleTest"
 if [ -d "${BINARY_PATH}" ]; then
@@ -23,5 +23,4 @@ mkdir -p "${DEPENDENCE_PATH}"/include
 cp -r "${SOURCE_PATH}"/googletest/include/gtest "${DEPENDENCE_PATH}/include"
 cp -r "${SOURCE_PATH}"/googlemock/include/gmock "${DEPENDENCE_PATH}/include"
 cp -r "${BINARY_PATH}"/lib "${DEPENDENCE_PATH}"
-
 rm -r "${BINARY_PATH}"
