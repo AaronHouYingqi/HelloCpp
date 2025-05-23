@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Hello Kitty",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/src/main",
+            // "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Hello Kitty"
+        },
+        {
+            "name": "LeetCode",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/test/leetcode_test",
+            // "program": "${command:cmake.launchTargetPath}",
+            "args": ["--gtest_filter=LeetCodeTest.*"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "LeetCode"
+        }
+    ]
+}
