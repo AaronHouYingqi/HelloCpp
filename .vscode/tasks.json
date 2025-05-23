@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Hello Kitty",
+			"type": "shell",
+			"command": "${workspaceFolder}/script/build.sh",
+			"args": [
+				"HELLO_KITTY"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOn": [],
+			"dependsOrder": "sequence",
+			"problemMatcher": []
+		},
+		{
+			"label": "LeetCode",
+			"type": "shell",
+			"command": "${workspaceFolder}/script/build.sh",
+			"args": [
+				"LEETCODE"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"dependsOn": [],
+			"dependsOrder": "sequence",
+			"problemMatcher": []
+		}
+	]
+}
