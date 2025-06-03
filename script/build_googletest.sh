@@ -4,7 +4,7 @@ ROOT_PATH=$(cd "$(dirname "$0")/.." || exit; pwd)
 cd "${ROOT_PATH}" || exit
 
 SOURCE_PATH="./open-source/GoogleTest"
-git submodule update --init --remote --recursive
+git submodule update --init --remote --recursive || exit
 
 BINARY_PATH="./.GoogleTest"
 if [ -d "${BINARY_PATH}" ]; then
