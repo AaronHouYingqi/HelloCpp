@@ -4,7 +4,12 @@
 		{
 			"label": "Hello Kitty",
 			"type": "shell",
-			"command": "${workspaceFolder}/script/build.sh",
+			"linux": {
+				"command": "${workspaceFolder}/script/Linux/build.sh"
+			},
+			"windows": {
+				"command": "${workspaceFolder}/script/Windows/build.bat"
+			},
 			"args": [
 				"HELLO_KITTY"
 			],
@@ -22,7 +27,12 @@
 		{
 			"label": "LeetCode",
 			"type": "shell",
-			"command": "${workspaceFolder}/script/build.sh",
+			"linux": {
+				"command": "${workspaceFolder}/script/Linux/build.sh"
+			},
+			"windows": {
+				"command": "${workspaceFolder}/script/Windows/build.bat"
+			},
 			"args": [
 				"LEETCODE"
 			],

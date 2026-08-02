@@ -22,6 +22,14 @@ if (${LEETCODE})
         gtest
         gtest_main
     )
+
+    install(TARGETS leetcode_test
+        RUNTIME DESTINATION bin
+        # CONFIGURATIONS Debug  # 可选：指定构建类型
+    )
+
+
+
 endif()
 
 # FIXME include(GoogleTest)

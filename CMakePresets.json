@@ -1,0 +1,76 @@
+{
+    "version": 8,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 14
+    },
+    "configurePresets": [
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "description": "Debug build for Linux",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "ENABLE_TESTING": "OFF",
+                "HELLO_KITTY": "ON",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "environment": {
+                "CC": "clang",
+                "CXX": "clang++"
+            },
+            "warnings": {
+                "dev": false,
+                "deprecated": true
+            }
+        },
+        {
+            "name": "windows",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "generator": "Visual Studio 17 2022",
+            "inherits": [
+                "linux-debug"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build-debug",
+            "configurePreset": "linux-debug",
+            "targets": [
+                "all"
+            ],
+            "jobs": 8,
+            "cleanFirst": false
+        },
+		{
+            "name": "build-debug HELLO_KITTY",
+            "configurePreset": "linux-debug",
+            "targets": [
+                "all"
+            ],
+            "jobs": 8,
+            "cleanFirst": false
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "test-all",
+            "configurePreset": "linux-debug",
+            "output": {
+                "outputOnFailure": true
+            },
+            "filter": {
+                "include": {
+                    "name": "test_.*"
+                }
+            }
+        }
+    ]
+}

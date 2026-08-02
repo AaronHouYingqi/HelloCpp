@@ -9,7 +9,8 @@
             // "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "Hello Kitty"
+            "preLaunchTask": "Hello Kitty",
+            "console": "internalConsole"
         },
         {
             "name": "LeetCode",
@@ -19,7 +20,8 @@
             // "program": "${command:cmake.launchTargetPath}",
             "args": ["--gtest_filter=LeetCodeTest.*"],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "LeetCode"
+            "preLaunchTask": "LeetCode",
+            "console": "internalConsole"
         }
     ]
-}
+}  // FIXME

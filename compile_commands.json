@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/yingqi/HelloCpp/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++23 -o src/CMakeFiles/main.dir/main.cpp.o -c /home/yingqi/HelloCpp/src/main.cpp",
+  "file": "/home/yingqi/HelloCpp/src/main.cpp",
+  "output": "src/CMakeFiles/main.dir/main.cpp.o"
+}
+]
